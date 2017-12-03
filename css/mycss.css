@@ -1,0 +1,37 @@
+img {
+    display: block;
+    width: 124%;
+}
+
+.show{
+	display: none;
+	position: fixed;
+	width: 70%;
+	border: 10px solid #1f2224;
+	z-index: 1;
+	margin-left: auto;
+	margin-right: auto;
+	left: 0;
+	right: 0;
+	background-color: white;
+	border-radius: 15px;
+	overflow: scroll;
+}
+
+.show img{
+	position: initial;
+	width: 100%;
+	margin-top: -7px;
+}
+
+h5{
+	position: initial;
+	color: orange;
+	font-weight: bold;
+	margin-top: 0px;
+	z-index: 2;
+	text-align: right;
+	margin-right: 5px;
+	margin-top: 5px;
+	cursor: pointer;
+}
