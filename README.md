@@ -1,1 +1,1 @@
-Dev: Nguyen Minh Duc
+Go to `login/pinterest-api-settings.php` to config

@@ -1,33 +1,17 @@
 <?php
-require_once 'token.php';
-require_once 'getimg.php';
+header('Content-Type: application/json; charset=UTF-8');
 
-//'711428141075263495' is broad id of me not add 
+$token = file_get_contents('../token/token.txt');
 
 $broadid = array(
-	'744994032047985184',
-	'611293418110451906',
-	'319826079727074187',
-	'636415059781861175',
-	'752804962651737732',
-	'453385956176237901',
-	'281897326614919901',
-	'153755843467460670',
-	'153755843467382242',
-	'153755843467413130',
-	'153755843467446316',
-	'836191924502199160',
-	'836191924502217169',
-	'836191924502218795',
-	'559572391139955655',
-	'559572391139952658',
-	'559572391139981008',
-	'510666113936441792'
+    '711428141075203839'
 );
 
-$random_keys=array_rand($broadid,1);
+$random_keys = array_rand($broadid, 1);
 
-header('Content-Type: application/json; charset=UTF-8'); 
+$url = 'https://api.pinterest.com/v1/boards/' . $broadid[$random_keys] . '/pins/?access_token=' . $token . '&fields=image&limit=100';
+//$url = 'https://api.myjson.com/bins/cktc5';
+$get_content = file_get_contents($url);
 
-echo getimg_broad($broadid[$random_keys],$token);
+echo $get_content;
 ?>

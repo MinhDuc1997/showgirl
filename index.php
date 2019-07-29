@@ -11,24 +11,23 @@
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<script src="js/events.js"></script>
-		<script src="js/ajax.js"></script>
 		<script src="js/getimg.js"></script>
 		<script src="js/createimg.js"></script>
 	</head>
-	<body>
+	<body onload="ajax('function/getjson.php')">
 
 		<!-- Wrapper -->
 			<div id="wrapper">
 
 				<!-- Header -->
-					<header id="header">
+				<!--	<header id="header">
 						<h1><a href="index.html"><strong>Multiverse</strong> by HTML5 UP</a></h1>
 						<nav>
 							<ul>
 								<li><a href="#footer" class="icon fa-info-circle">About</a></li>
 							</ul>
 						</nav>
-					</header>
+					</header>-->
 
 				<!-- Main -->
 					<div id="main">
@@ -85,6 +84,7 @@
 							</div>
 						</div>
 					</footer>
+
 
 			</div>
 
